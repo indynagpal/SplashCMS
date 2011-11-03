@@ -36,7 +36,8 @@
         <cfif layout.save()>
       		  
             <cfset flashInsert(success="The layout was created successfully")>
-            <cfset redirectTo(route="layouts_path")>
+            <cfset redirectTo(route="edit_layout_path", key=layout.id)>
+            <!--- <cfset redirectTo(route="layouts_path")> --->
         <cfelse>
             <cfset flashInsert(error="There was an error creating the layout.")>
   		    <cfset renderPage(action="new")>
@@ -51,7 +52,8 @@
 		
         <cfif layout.update(params.layout)>
       		<cfset flashInsert(success="The layout was updated successfully.")>	
-            <cfset redirectTo(route="layouts_path")>
+          <cfset redirectTo(route="edit_layout_path", key=layout.id)>
+          <!--- <cfset redirectTo(route="layouts_path")> --->
       	<cfelse>
       		<cfset flashInsert(error="There was an error updating the layout.")>
       		<cfset renderPage(action="edit")>

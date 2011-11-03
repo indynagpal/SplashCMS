@@ -11,14 +11,14 @@
   
   <cffunction name="new">
     <cfset snippet = model('snippet').new()>
-    <cfset category = model('categories').new()>
-    <cfset categories = model('categories').findAll()>
+    <cfset category = model('category').new()>
+    <cfset categories = model('category').findAll()>
   </cffunction>
   
   <cffunction name="edit">
   	<cfset snippet = model('snippet').findByKey(params.key)>
-	<cfset category = model('categories').new()>
-    <cfset categories = model('categories').findAll()>
+	<cfset category = model('category').new()>
+    <cfset categories = model('category').findAll()>
         
     <cfif NOT IsObject(snippet)>
       <cfset flashInsert(info="No snippet exists for ID #params.key#")>
@@ -41,10 +41,11 @@
     
     <cfif snippet.save()>
         <cfset flashInsert(success="The snippet was created successfully")>
-        <cfset redirectTo(route="snippets_path")>
+        <cfset redirectTo(route="edit_snippet_path", key=snippet.id)>
+        <!--- <cfset redirectTo(route="snippets_path")> --->
     <cfelse>
-        <cfset category = model('categories').new()>
-    <cfset categories = model('categories').findAll()>
+        <cfset category = model('category').new()>
+    <cfset categories = model('category').findAll()>
         <cfset flashInsert(error="There was an error creating the snippet.")>
   		<cfset renderPage(action="new")>
     </cfif>
@@ -65,11 +66,12 @@
 		<cffile action="write" file="#application.defaults.snippetsPath#/#snippet.fileName#" output="<cfimport taglib='../../lib/splash/tags' prefix='s' />#snippet.content#" addnewline="no" fixnewline="yes" />
 		  
   		<cfset flashInsert(success="The snippet was updated successfully.")>	
-        <cfset redirectTo(route="snippets_path")>
+      <cfset redirectTo(route="edit_snippet_path", key=snippet.id)>
+      <!--- <cfset redirectTo(route="snippets_path")> --->
   	<cfelse>
   		<cfset flashInsert(error="There was an error updating the snippet.")>
-  		<cfset category = model('categories').new()>
-        <cfset categories = model('categories').findAll()>
+  		<cfset category = model('category').new()>
+      <cfset categories = model('category').findAll()>
   		<cfset renderPage(action="edit")>
   	</cfif>
   </cffunction>

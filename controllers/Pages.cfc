@@ -43,7 +43,8 @@
       </cfloop>
       
       <cfset flashInsert(success="The page has been created successfully.")>
-      <cfset redirectTo(route="pages_path")>
+      <cfset redirectTo(route="edit_page_path", key=page.id, parentID=page.parentid)>
+      <!--- <cfset redirectTo(route="pages_path")> --->
     <cfelse>
       <cfset flashInsert(error="There was an error creating the page.")>
   		<cfset renderPage(action="new")>
@@ -87,7 +88,9 @@
       </cfloop>
       
   		<cfset flashInsert(success="The page was updated successfully.")>	
-      <cfset redirectTo(route="pages_path")>
+
+      <cfset redirectTo(route="edit_page_path", key=page.id, parentID=page.parentid)>
+      <!--- <cfset redirectTo(route="pages_path")> --->
   	<cfelse>
   		<cfset flashInsert(error="There was an error updating the page.")>
   		<cfset renderPage(action="edit")>
