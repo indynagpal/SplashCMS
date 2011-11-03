@@ -1,7 +1,7 @@
 <cfhtmlhead text='<script type="text/javascript" src="/javascripts/jquery.slug.js"></script>'>
 
 <div class="page-properties">
-  <button id="add_tab" class="ui-button ui-state-default ui-corner-all">Add Page Part</button> 
+  <button id="add_tab" class="ui-button ui-state-default ui-corner-all">Add Page Part</button>
   <button id="hideShow" class="ui-button ui-state-default ui-corner-all">Page Properties</button>
   <button id="viewSite" class="ui-button ui-state-default ui-corner-all" onclick="window.open('/');">View Site</button>
 </div>
@@ -18,17 +18,17 @@
 </div>
 
 <cfoutput>
-			
+
   #errorMessagesFor("page")#
-	
+
 	#startFormTag(route="create_page_path", parentID=params.parentID, class="form")#
-		
+
 		#hiddenField(objectName="page", property="parentid")#
-				
+
 		<p>
 			#textField(objectName='page', property='title', class="text_field", maxlength="255", label="Page Title", labelClass="label")#
 		</p>
-													
+
 		<div class="more">
 			<p>
 				#textField(objectName='page', property='slug', class="text_field slug", maxlength="100", label="Slug", labelClass="label")#
@@ -38,12 +38,12 @@
 			</p>
 			<p>
 				#textField(objectName='page', property='description', class="text_field", maxlength="255", label="Description", labelClass="label")#
-			</p>	
+			</p>
 			<p>
 				#textField(objectName='page', property='keywords', class="text_field", maxlength="255", label="Keywords", labelClass="label")#
 			</p>
 		</div>
-		
+
 	  <div id="tabs">
 	    <!--- navigation for tabs --->
 	    <ul>
@@ -53,7 +53,7 @@
 	        </li>
 	      </cfloop>
 			</ul>
-			
+
 			<!--- tab containers --->
 			<cfloop from="1" to="#arrayLen(application.defaults.page.parts)#" index="i">
 	        <div id="tabs-#application.defaults.page.parts[i]#">
@@ -64,18 +64,18 @@
 	    </cfloop>
 
 		</div>
-	 
+
 	  <p>
 			#select(objectName='page', property='layoutID', label="<strong>Layout </strong>", options=layouts, valueField="id", textField="name", includeBlank="Inherit")#
     	&nbsp;&nbsp;&nbsp;&nbsp;
-   	  #select(objectName='page', property='pageClassID', label="<strong>Page Type 
+   	  #select(objectName='page', property='pageClassID', label="<strong>Page Type
 </strong>", options=pageClasses, valueField="id", textField="name")#
     	&nbsp;&nbsp;&nbsp;&nbsp;
     	#select(objectName="page", property="status", label="<strong>Status </strong>", options=status)#
     </p>
-					
-	  <p>#submitTag(class="ui-button ui-state-default ui-corner-all", value="Save Page &rarr;")# or #linkTo(text="Cancel", route="pages_path")#</p>
-		
+
+	  <p>#submitTag(class="ui-button ui-state-default ui-corner-all", value="Save Page &rarr;")# or #linkTo(text="Back to Pages", route="pages_path")#</p>
+
 	#endFormTag()#
-			
+
 </cfoutput>

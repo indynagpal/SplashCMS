@@ -4,11 +4,11 @@
 	#errorMessagesFor("user")#
 
 	#startFormTag(route="create_user_path", class="form")#
-	
+
 	  #includePartial('form')#
 
-	  #submitTag(class="ui-button ui-state-default ui-corner-all", value="Create User &rarr;")# or #linkTo(text="Cancel", route="users_path")#
-		
+	  #submitTag(class="ui-button ui-state-default ui-corner-all", value="Create User &rarr;")# or #linkTo(text="Back to Users", route="users_path")#
+
 	#endFormTag()#
 </cfoutput>
 

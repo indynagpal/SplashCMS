@@ -5,13 +5,13 @@
 	#errorMessagesFor("user")#
 
 	#startFormTag(route="update_user_path", key=params.key, class="form")#
-		
+
 		#includePartial('form')#
-		
-		#submitTag(class="ui-button ui-state-default ui-corner-all", value="Update User &rarr;")# or #linkTo(text="Cancel", route="users_path")#
-		
+
+		#submitTag(class="ui-button ui-state-default ui-corner-all", value="Update User &rarr;")# or #linkTo(text="Back to Users", route="users_path")#
+
 	#endFormTag()#
-	
+
 	<cfif user.updatedByID is NOT "">
 	  #includePartial(partial='/shared/last_update', updatedByID=user.updatedByID, updatedAt=user.updatedAt)#
 	</cfif>
