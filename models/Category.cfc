@@ -1,6 +1,7 @@
 <cfcomponent extends="Model" output="false"><cfscript>
     
     function init(){
+    	table("cms_categories");
         hasMany('Snippets');
         
         validatesPresenceOf(properties="name", message="Your category must have a name.");

@@ -1,6 +1,7 @@
 <cfcomponent extends="Model" output="false">
 
 	<cffunction name="init">		
+		<cfset table("cms_users")>
 		<cfset hasMany("pages")>
 		
 		<cfset validatesPresenceOf(property="username", message="Username is required")>

@@ -1,6 +1,7 @@
 <cfcomponent extends="Model" output="false">
 
 	<cffunction name="init">
+		<cfset table("cms_layouts")>
         <cfset hasMany("pages")>
 
         <cfset validatesPresenceOf(property="name" , message="Your layout must have a name.")>

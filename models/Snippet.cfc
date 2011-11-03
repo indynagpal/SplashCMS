@@ -1,6 +1,7 @@
 <cfcomponent extends="Model" output="false">
 
     <cffunction name="init">
+        <cfset table("cms_snippets")>
         <cfset belongsTo(name='Category', joinType="outer")>
              
         <cfset validatesPresenceOf(property="name" , message="Your snippet must have a name.")>

@@ -5,6 +5,7 @@
 <cfcomponent output="false" extends="Model">
 	
 	<cffunction name="init">
+		<cfset table("cms_pageparts")>
 		<cfset belongsTo('page')>
 	    <cfset beforeUpdate('deleteOldFile')>
         <cfset afterCreate('write')>
