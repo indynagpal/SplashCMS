@@ -13,7 +13,7 @@
 		
 		#includePartial('form')#
 				
-		#submitTag(class="ui-button ui-state-default ui-corner-all", value="Update Snippet &rarr;")# or #linkTo(text="Cancel", route="snippets_path")#
+		#submitTag(class="ui-button ui-state-default ui-corner-all", value="Update Snippet &rarr;")# or #linkTo(text="Back to Snippets", route="snippets_path")#
 				
 	#endFormTag()#
 	
