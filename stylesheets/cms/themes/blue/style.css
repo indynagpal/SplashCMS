@@ -14,12 +14,12 @@ body {
 }
 
 hr {
-  background: #f0f0ee; 
+  background: #f0f0ee;
   color: #f0f0ee;
 }
 
 #header {
- background: #000 url( "/images/header_bkgd.png" ) repeat-x ;
+ background: #000 url( "/images/cms/header_bkgd.png" ) repeat-x ;
 }
 
 #header h1 {
@@ -31,7 +31,7 @@ hr {
 }
 
 #header .site-link a {
- 
+
 }
 
 #user-navigation {
@@ -57,7 +57,7 @@ hr {
   background: #FFFFCC;
 }
 
-#sidebar h3 {  
+#sidebar h3 {
   background: #0073ea;
   color: #FFF;
   border-bottom: 10px solid #262626;
@@ -134,13 +134,13 @@ hr {
   background-color: #262626;
 }
 
-#footer .block {  
+#footer .block {
   color: #FFF;
   background: #262626;
 }
 
-#footer .block p {      
-  margin: 0;  
+#footer .block p {
+  margin: 0;
   padding: 10px;
 }
 
@@ -243,17 +243,17 @@ ul.list li .item .avatar {
   border-color: #F0F0EE;
   border-width: 1px;
   border-style: solid;
-  padding: 2px; 
+  padding: 2px;
 }
 
 /* box */
 
 #box .block {
-  background: #FFF;  
+  background: #FFF;
 }
 
 #box .block h2 {
-  background: #0073ea;  
+  background: #0073ea;
   color: #FFF;
 }
 
@@ -278,7 +278,7 @@ ul.list li .item .avatar {
 
 /* rounded borders */
 
-#main, #main-navigation, #main-navigation li, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li, 
+#main, #main-navigation, #main-navigation li, .secondary-navigation, #main .block, #sidebar .block, #sidebar h3, ul.list li,
 #footer .block, .form input.button, #box .block, #box .block h2 {
   -moz-border-radius-topleft: 4px;
   -webkit-border-top-left-radius: 4px;

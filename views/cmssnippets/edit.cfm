@@ -18,7 +18,7 @@
 	#endFormTag()#
 
 	<cfif snippet.updatedByID is NOT "">
-	  #includePartial(partial='/shared/cms_last_update', updatedByID=snippet.updatedByID, updatedAt=snippet.updatedAt)#
+	  #includePartial(partial='/shared/cms/last_update', updatedByID=snippet.updatedByID, updatedAt=snippet.updatedAt)#
 	</cfif>
 
 	#includePartial("category_form")#

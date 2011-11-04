@@ -2,6 +2,7 @@
 
   <cffunction name="init">
     <cfset filters(through="loginRequired")>
+    <cfset usesLayout(template="/cmslayout")>
   </cffunction>
 
   <cffunction name="index">

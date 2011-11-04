@@ -11,7 +11,7 @@ a img { border: none; }
 
 body {
   font-size: 14px;
-  font-family: "Trebuchet MS", 'Lucida Grande', 'Bitstream Vera Sans', Helvetica, Verdana, Arial, sans-serif;  
+  font-family: "Trebuchet MS", 'Lucida Grande', 'Bitstream Vera Sans', Helvetica, Verdana, Arial, sans-serif;
 }
 
 #container {
@@ -24,12 +24,12 @@ body {
 
 #header {
   position: relative;
-  padding-top: 1px;  
+  padding-top: 1px;
 }
 
 #header h1 {
   margin: 0;
-  padding: 10px 0; 
+  padding: 10px 0;
   font-size: 30px;
 }
 
@@ -42,9 +42,9 @@ body {
   padding:3px 5px;
 }
 
-#main {  
+#main {
   width: 100%;
-  float: left;    
+  float: left;
 }
 
 .actions-bar {
@@ -63,10 +63,10 @@ body {
 
 #sidebar {
   width: 25%;
-  float: right;      
+  float: right;
 }
 
-#sidebar h3 {  
+#sidebar h3 {
   padding: 10px 15px;
   margin: 0;
   font-size: 13px;
@@ -100,7 +100,7 @@ body {
 }
 
 #main .block .content .inner {
-  padding: 0 15px 15px;  
+  padding: 0 15px 15px;
 }
 
 #main .main p.first {
@@ -110,7 +110,7 @@ body {
 #user-navigation {
   position: absolute;
   top: 0px;
-  right: 20px;  
+  right: 20px;
 }
 
 #main-navigation {
@@ -124,7 +124,7 @@ body {
 }
 
 #user-navigation ul li, #main-navigation ul li, .secondary-navigation ul li {
-  float: left;  
+  float: left;
 }
 
 #main-navigation ul li {
@@ -148,14 +148,14 @@ body {
 }
 
 .secondary-navigation {
-  font-size: 13px;  
+  font-size: 13px;
   border-bottom-width: 10px;
   border-bottom-style: solid;
 }
 
 .secondary-navigation ul li a {
   display: block;
-  padding: 10px 15px;  
+  padding: 10px 15px;
 }
 
 #footer {
@@ -166,7 +166,7 @@ body {
 
 .pagination a, .pagination span {
   padding: 2px 5px;
-  margin-right: 5px; 
+  margin-right: 5px;
   display: block;
   float: left;
   border-style: solid;
@@ -174,17 +174,17 @@ body {
 }
 
 .pagination span.current {
-  font-weight: bold;  
+  font-weight: bold;
 }
 
 .pagination a {
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 /* tables */
 .table {
   width: 100%;
-  border-collapse: collapse;  
+  border-collapse: collapse;
   margin-bottom: 15px;
 }
 
@@ -199,7 +199,7 @@ body {
 }
 
 .table th.last {
-  width: 200px;  
+  width: 200px;
 }
 
 .table .checkbox {
@@ -208,7 +208,7 @@ body {
 
 .table td {
   padding: 5px;
-  
+
 }
 
 .table td a {
@@ -220,7 +220,7 @@ body {
   font-size:17px;
   font-weight:bold;
   text-decoration:none;
-  background:url("/images/snippet.png") no-repeat 0 0;
+  background:url("/images/cms/snippet.png") no-repeat 0 0;
 	text-indent:35px;
 	display:block;
 	line-height:1.7em;
@@ -231,7 +231,7 @@ body {
   font-size:17px;
   font-weight:bold;
   text-decoration:none;
-  background:url("/images/layout.png") no-repeat 0 0;
+  background:url("/images/cms/layout.png") no-repeat 0 0;
 	text-indent:35px;
 	display:block;
 	line-height:1.8em;
@@ -242,7 +242,7 @@ body {
   font-size:17px;
   font-weight:bold;
   text-decoration:none;
-  background:url("/images/page.png") no-repeat 0 0;
+  background:url("/images/cms/page.png") no-repeat 0 0;
 	text-indent:35px;
 	display:block;
 	line-height:1.8em;
@@ -254,7 +254,7 @@ body {
   font-size:17px;
   font-weight:bold;
   text-decoration:none;
-  /*background:url("/images/page.png") no-repeat 0 0;
+  /*background:url("/images/cms/page.png") no-repeat 0 0;
 	text-indent:35px;
 	display:block;*/
 	line-height:1.8em;
@@ -318,7 +318,7 @@ input.checkbox {
 
 .form label.label {
   display: block;
-  padding-bottom: 2px;  
+  padding-bottom: 2px;
   font-weight: bold;
 }
 
@@ -352,7 +352,7 @@ ul.list li {
 }
 
 ul.list li .left {
-  float: left;  
+  float: left;
 }
 
 ul.list li .left .avatar {
@@ -375,7 +375,7 @@ ul.list li .item .avatar {
 
 #box {
   width: 500px;
-  margin: 50px auto;  
+  margin: 50px auto;
 }
 
 #box .block {
@@ -384,7 +384,7 @@ ul.list li .item .avatar {
 
 #box .block h2 {
   padding: 10px 15px;
-  margin: 0;  
+  margin: 0;
 }
 
 #box .block .content {
@@ -393,7 +393,7 @@ ul.list li .item .avatar {
 
 /*  WIDE SIDEBAR BUTTONS */
 a.button_wide{
-	background:url("/images/button.gif");
+	background:url("/images/cms/button.gif");
 	display:block;
 	font-weight:bold;
 	height:30px;
@@ -410,19 +410,19 @@ a:hover.button_wide{
 /* CLASSES				*/
 /* -------------------- */
 a.button_wide .new-snippet{
-	background:url("/images/new-snippet.png") no-repeat 5px 3px;
+	background:url("/images/cms/new-snippet.png") no-repeat 5px 3px;
 	text-indent:35px;
 	display:block;
 }
 
 a.button_wide .new-layout{
-	background:url("/images/new-layout.png") no-repeat 5px 3px;
+	background:url("/images/cms/new-layout.png") no-repeat 5px 3px;
 	text-indent:35px;
 	display:block;
 }
 
 a.button_wide .new-user{
-	background:url("/images/new-user.png") no-repeat 7px 5px;
+	background:url("/images/cms/new-user.png") no-repeat 7px 5px;
 	text-indent:40px;
 	display:block;
 }

@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <cfoutput>#includePartial('/shared/cms_footer')#</cfoutput>
+    <cfoutput>#includePartial('/shared/cms/footer')#</cfoutput>
 
   </div>
 </body>

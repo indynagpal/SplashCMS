@@ -13,6 +13,6 @@
 	#endFormTag()#
 
 	<cfif user.updatedByID is NOT "">
-	  #includePartial(partial='/shared/cms_last_update', updatedByID=user.updatedByID, updatedAt=user.updatedAt)#
+	  #includePartial(partial='/shared/cms/last_update', updatedByID=user.updatedByID, updatedAt=user.updatedAt)#
 	</cfif>
 </cfoutput>

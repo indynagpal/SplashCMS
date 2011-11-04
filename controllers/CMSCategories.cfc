@@ -2,6 +2,7 @@
 
     function init() {
         filters(through="loginRequired");
+        usesLayout(template="/cmslayout");
     }
 
     function index() {

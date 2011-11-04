@@ -3,9 +3,8 @@
 	Do not delete this file.
 --->
 <cfcomponent extends="Wheels">
-  
+
   <cffunction name="init">
-    <cfset filters(through="loginRequired")>
   </cffunction>
 
 	<cffunction name="congratulations">
@@ -17,7 +16,7 @@
 			<cfset renderNothing()>
 		</cfif>
 	</cffunction>
-	
+
 	<cffunction name="wheelsExecute" access="public" returntype="any">
             <cfargument name="wheelsCommand" type="string" required="yes">
             <cfreturn evaluate(wheelsCommand)>

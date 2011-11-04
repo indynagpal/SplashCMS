@@ -1,7 +1,7 @@
 <script type="text/javascript">
     $(document).ready(function()  {
       $("#pageTree").treeTable();
-      
+
       // expand the home node by default
       $("#node-1").expand();
     });
@@ -30,11 +30,11 @@
       </td>
       <td><cfif status is "Draft"><span class="red">#status#</span><cfelse>#status#</cfif></td>
       <td>
-          #linkTo(text='#imageTag("add-child.png")#', route='new_page_path', parentid=id)#
+          #linkTo(text='#imageTag("cms/add-child.png")#', route='new_page_path', parentid=id)#
         <cfif parentId is '0'>
-          #imageTag("remove-disabled.png")#
+          #imageTag("cms/remove-disabled.png")#
         <cfelse>
-          #linkTo(text='#imageTag("remove.png")#', route='delete_page_path', key=id, confirm='Are you sure you want to delete this Page? This cannot be undone!')#
+          #linkTo(text='#imageTag("cms/remove.png")#', route='delete_page_path', key=id, confirm='Are you sure you want to delete this Page? This cannot be undone!')#
         </cfif>
       </td>
     </tr>

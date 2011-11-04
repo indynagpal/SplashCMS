@@ -1,4 +1,4 @@
-<cfhtmlhead text='<script type="text/javascript" src="/javascripts/jquery.slug.js"></script>'>
+<cfhtmlhead text='<script type="text/javascript" src="/javascripts/cms/jquery.slug.js"></script>'>
 
 <div class="page-properties">
   <button id="add_tab" class="ui-button ui-state-default ui-corner-all">Add Page Part</button>
@@ -82,7 +82,7 @@
 	#endFormTag()#
 
 	<cfif page.updatedByID is NOT "">
-	  #includePartial(partial='/shared/cms_last_update', updatedByID=page.updatedByID, updatedAt=page.updatedAt)#
+	  #includePartial(partial='/shared/cms/last_update', updatedByID=page.updatedByID, updatedAt=page.updatedAt)#
 	</cfif>
 
 	<cfif page.publishedAt is NOT "">

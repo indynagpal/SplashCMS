@@ -16,11 +16,11 @@
     	</td>
     	<td>
     	  <cfif id eq '1'>
-    	    #imageTag('remove-disabled.png')#
+    	    #imageTag('cms/remove-disabled.png')#
     	  <cfelse>
-    		#linkTo(text='#imageTag("remove.png")#', route='delete_user_path', key=id, confirm='Are you sure you want to delete this User? This cannot be undone!')#
+    		#linkTo(text='#imageTag("cms/remove.png")#', route='delete_user_path', key=id, confirm='Are you sure you want to delete this User? This cannot be undone!')#
     		</cfif>
-    	</td>            
+    	</td>
 	  </tr>
   </cfoutput>
 </table>

@@ -13,8 +13,8 @@
 	  <cfoutput query="layouts">
 	  <tr id="#id#">
 	    <td>#linkTo(text=name, route="edit_layout_path", key=id, class="layout")#</td>
-	    <td>#imageTag(source="reorder-children.png", id="sorterHandle")#
-	    	#linkTo(text='#imageTag("remove.png")#', route='delete_layout_path', key=id, confirm='Are you sure you want to delete this Layout? This cannot be undone!')#</td>
+	    <td>#imageTag(source="cms/reorder-children.png", id="sorterHandle")#
+	    	#linkTo(text='#imageTag("cms/remove.png")#', route='delete_layout_path', key=id, confirm='Are you sure you want to delete this Layout? This cannot be undone!')#</td>
 	  </tr>
 	  </cfoutput>
   </tbody>
@@ -25,13 +25,13 @@
 	<p>#linkTo(text="<span class='new-layout'>New Layout</span>", route="new_layout_path", class="button_wide")#</p>
 </cfoutput>
 
-<script type="text/javascript">	
+<script type="text/javascript">
 	$(".table tbody").sortable({
 		helper: fixHelper,
 		handle: '#sorterHandle',
-		update: function(event, ui) { 
+		update: function(event, ui) {
 	   				var order = $(this).sortable('toArray');
-			
+
 	   				$.ajax({
 					      url: <cfoutput>"#URLFor(route='reorder_layouts_path')#?order="+order</cfoutput>,
 					      type: "POST",

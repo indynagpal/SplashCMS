@@ -1,4 +1,4 @@
-<cfhtmlhead text='<script type="text/javascript" src="/javascripts/jquery.slug.js"></script>'>
+<cfhtmlhead text='<script type="text/javascript" src="/javascripts/cms/jquery.slug.js"></script>'>
 
 <div class="page-properties">
   <button id="add_tab" class="ui-button ui-state-default ui-corner-all">Add Page Part</button>

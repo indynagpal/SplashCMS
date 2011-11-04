@@ -18,11 +18,11 @@
 }
 
 .treeTable tr.collapsed td .expander {
-  background-image: url(/images/toggle-expand-dark.gif);
+  background-image: url(/images/cms/toggle-expand-dark.gif);
 }
 
 .treeTable tr.expanded td .expander {
-  background-image: url(/images/toggle-collapse-dark.gif);
+  background-image: url(/images/cms/toggle-collapse-dark.gif);
 }
 
 /* jquery.treeTable.sortable
@@ -33,11 +33,11 @@
 }
 
 .treeTable tr.collapsed.selected td .expander, .treeTable tr.collapsed.accept td .expander {
-  background-image: url(/images/toggle-expand-light.gif);
+  background-image: url(/images/cms/toggle-expand-light.gif);
 }
 
 .treeTable tr.expanded.selected td .expander, .treeTable tr.expanded.accept td .expander {
-  background-image: url(/images/toggle-collapse-light.gif);
+  background-image: url(/images/cms/toggle-collapse-light.gif);
 }
 
 .treeTable .ui-draggable-dragging {

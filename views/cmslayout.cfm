@@ -7,16 +7,16 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
 
 	<cfoutput>
-	 #stylesheetLinkTag("base, jquery.treeTable.css, themes/blue/style.css, splash/jquery-ui-1.7.2.custom.css")#
-     #javascriptIncludeTag("jquery.treeTable.min.js,application")#
+	 #stylesheetLinkTag("cms/base, cms/jquery.treeTable, cms/themes/blue/style, cms/splash/jquery-ui-1.7.2.custom")#
+     #javascriptIncludeTag("cms/jquery.treeTable.min,cms/application")#
 	</cfoutput>
 
   <cfif params.controller is "CMSPages" and (params.action is "new" or params.action is "edit")>
-    <cfoutput>#javascriptIncludeTag("pages")#</cfoutput>
+    <cfoutput>#javascriptIncludeTag("cms/pages")#</cfoutput>
   </cfif>
 
   <cfif params.controller is "CMSSnippets" and (params.action is "new" or params.action is "edit")>
-    <cfoutput>#javascriptIncludeTag("snippets")#</cfoutput>
+    <cfoutput>#javascriptIncludeTag("cms/snippets")#</cfoutput>
   </cfif>
 
 </head>
@@ -26,8 +26,8 @@
         <cfoutput>
             <h1>#linkTo(text="#application.admin.title#", route="admin_path")#</h1>
 
-            #includePartial('/shared/cms_user_navigation')#
-            #includePartial('/shared/cms_main_navigation')#
+            #includePartial('/shared/cms/user_navigation')#
+            #includePartial('/shared/cms/main_navigation')#
         </cfoutput>
 
     </div>
@@ -37,7 +37,7 @@
         <div class="block">
           <cfoutput>
             <!--- secondary navigation will go here if we ever need it --->
-            #includePartial("/shared/cms_render_flash")#
+            #includePartial("/shared/cms/render_flash")#
           </cfoutput>
           <div class="content">
             <div class="inner">
@@ -46,7 +46,7 @@
           </div>
         </div>
 
-        <cfoutput>#includePartial('/shared/cms_footer')#</cfoutput>
+        <cfoutput>#includePartial('/shared/cms/footer')#</cfoutput>
       </div>
     </div>
   </div>
