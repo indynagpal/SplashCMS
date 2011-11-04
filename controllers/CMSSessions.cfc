@@ -1,8 +1,7 @@
 <cfcomponent extends="Controller">
 
   <cffunction name="init">
-    <cfset filters(through="loginProhibited", only="new, create")>
-    <cfset usesLayout(template="/cmslayout")>
+	<cfset filters(through="loginProhibited", only="new, create")>
   </cffunction>
 
 	<cffunction name="new">
