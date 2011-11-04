@@ -11,11 +11,11 @@
      #javascriptIncludeTag("jquery.treeTable.min.js,application")#
 	</cfoutput>
 
-  <cfif params.controller is "pages" and (params.action is "new" or params.action is "edit")>
+  <cfif params.controller is "CMSPages" and (params.action is "new" or params.action is "edit")>
     <cfoutput>#javascriptIncludeTag("pages")#</cfoutput>
   </cfif>
 
-  <cfif params.controller is "snippets" and (params.action is "new" or params.action is "edit")>
+  <cfif params.controller is "CMSSnippets" and (params.action is "new" or params.action is "edit")>
     <cfoutput>#javascriptIncludeTag("snippets")#</cfoutput>
   </cfif>
 

@@ -2,7 +2,7 @@
 
     <cffunction name="init">
         <cfset table("cms_snippets")>
-        <cfset belongsTo(name='CMSCategory', joinType="outer")>
+        <cfset belongsTo(name='category', modelName="CMSCategory", joinType="outer", foreignKey="categoryid")>
 
         <cfset validatesPresenceOf(property="name" , message="Your snippet must have a name.")>
         <cfset validatesPresenceOf(property="content" , message="Your snippet must have a body.")>

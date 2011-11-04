@@ -1,8 +1,8 @@
 <!--- <cfdump var="#loc#" abort /> --->
 <cfoutput>
-    <cfif loc.categoryName is Not "">
+    <cfif loc.CMScategoryName is Not "">
     <tr>
-      <td colspan="2" class="title">#loc.categoryName#</td>
+      <td colspan="2" class="title">#loc.CMScategoryName#</td>
     </tr>
     </cfif>
 
