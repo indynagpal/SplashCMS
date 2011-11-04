@@ -9,7 +9,7 @@
 
     <cfset wheelsProxy=CreateObject("component","controllers.Controller") >
 
-    <cfset snippet = wheelsProxy.wheelsExecute("model('snippet').findOneByName('#attributes.name#')")>
+    <cfset snippet = wheelsProxy.wheelsExecute("model('CMSSnippet').findOneByName('#attributes.name#')")>
 
     <cfif isObject(snippet)>
         <cfoutput>

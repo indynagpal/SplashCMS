@@ -2,10 +2,10 @@
 
     <cffunction name="init">
     	<cfset table("cms_pages")>
-		<cfset hasMany('PageParts')>
-        <cfset belongsTo(name='pageLayout', modelName="layout", foreignKey="layoutID")>      
-        <cfset belongsTo('PageClass')>
-        <cfset belongsTo(name="author", modelName="user", foreignKey="createdByID")>
+		<cfset hasMany(name="pageParts", modelName='CMSPagePart',foreignKey="pageid")>
+        <cfset belongsTo(name='pageLayout', modelName="CMSLayout", foreignKey="layoutID")>
+        <cfset belongsTo('CMSPageClass')>
+        <cfset belongsTo(name="author", modelName="CMSUser", foreignKey="createdByID")>
 
         <cfset validatesPresenceOf(property="title" , message="Your page must have a title.")>
 		<cfset validatesLengthOf(properties="title,keywords,description", message="You have exceeded the maximun length", allowBlank="true", maximum="255")>
@@ -22,16 +22,16 @@
     <cffunction name="getChildren" access="public">
 		<cfset var loc = arguments.attributeCollection >
 		<cfset var childPages = "">
-		
+
 		<cfif StructKeyExists(loc, "where") >
 			<cfset loc.where = "(" & loc.where>
 			<cfset loc.where &= ") AND (parentID = #this.id#)">
 		<cfelse>
 			<cfset loc.where = "parentID = #this.id#">
 		</cfif>
-		
+
 		<cfset childPages = this.findAll(argumentCollection=loc)>
-  	
+
         <cfreturn childPages>
     </cffunction>
 
@@ -44,7 +44,7 @@
             <cfset this.publishedAt = now()>
         </cfif>
     </cffunction>
-    
+
     <cffunction name="setLayoutId" access="private">
     	<cfset var loc = {}>
     	<cfif this.layoutId IS "">

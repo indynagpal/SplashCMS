@@ -17,7 +17,7 @@
     <cfset wheelsProxy = CreateObject("component","controllers.Controller")>
 
 	<!--- Find the desired part --->
-    <cfset pagePart = wheelsProxy.wheelsExecute("model('pagePart').findByPage(pageID=#attributes.page.ID#, part = '#attributes.part#')")>
+    <cfset pagePart = wheelsProxy.wheelsExecute("model('CMSPagePart').findByPage(pageID=#attributes.page.ID#, part = '#attributes.part#')")>
 
     <cfif IsObject(pagePart)>
         <cfoutput>

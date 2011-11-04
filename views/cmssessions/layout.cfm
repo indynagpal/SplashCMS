@@ -5,7 +5,7 @@
 	<title><cfoutput>#application.admin.title#</cfoutput></title>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
-	
+
 	<cfoutput>
 	 #stylesheetLinkTag("base, themes/blue/style.css, splash/jquery-ui-1.7.2.custom.css")#
    	 #javascriptIncludeTag("application")#
@@ -16,7 +16,7 @@
     <div id="header">
       <h1><cfoutput>#linkTo(text="#application.admin.title#", route="admin_path")#</cfoutput></h1>
     </div>
-        
+
     <div class="block">
       <div class="content">
         <div class="inner">
@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <cfoutput>#includePartial('/shared/footer')#</cfoutput>
+    <cfoutput>#includePartial('/shared/cms_footer')#</cfoutput>
 
   </div>
 </body>

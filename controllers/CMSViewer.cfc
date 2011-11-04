@@ -3,14 +3,14 @@
 <!--- @@Copyright: Copyright (c) 2009 Mad Piranha, Inc.. All rights reserved. --->
 <!--- @@License: --->
 <cfcomponent extends="Controller">
-	
+
 	<cffunction name="init">
 	</cffunction>
-	
+
 	<cffunction name="index">
         <cfparam name="params.slug" default="/">
-        
-        <cfset request.page = model('page').findOneBySlug(params.slug)>
+
+        <cfset request.page = model('CMSPage').findOneBySlug(params.slug)>
 
         <cfif isObject(request.page) AND request.page.status is "published">
             <cfset request.layout = request.page.pageLayout() />
@@ -41,15 +41,15 @@
                     </cfsavecontent>
                 </cfif>
             </cfif>
-            
+
         <cfelse>
           <!---
             TODO this should redirect to an admin themed 404 page unless a "page not found" type of page exists
           --->
-          <cfset request.page = model('page').findOneByPageClassID('2')>
+          <cfset request.page = model('CMSPage').findOneByPageClassID('2')>
           <cfif isObject(request.page) AND request.page.status is "published">
             <cfset request.layoutFile = request.page.pageLayout().fileName>
-        
+
             <cfsavecontent variable="renderedPage">
               <!--- include the layout --->
               <cfinclude template="#application.defaults.rootPath#public/layouts/#request.layoutFile#">
@@ -60,5 +60,5 @@
           </cfif>
         </cfif>
   </cffunction>
-	
+
 </cfcomponent>
