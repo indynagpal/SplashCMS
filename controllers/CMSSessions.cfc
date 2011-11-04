@@ -2,6 +2,7 @@
 
   <cffunction name="init">
 	<cfset filters(through="loginProhibited", only="new, create")>
+	<cfset usesLayout(template="layout")>
   </cffunction>
 
 	<cffunction name="new">

@@ -7,8 +7,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js" type="text/javascript"></script>
 
 	<cfoutput>
-	 #stylesheetLinkTag("base, themes/blue/style.css, splash/jquery-ui-1.7.2.custom.css")#
-   	 #javascriptIncludeTag("application")#
+	 #stylesheetLinkTag("cms/base, cms/themes/blue/style, cms/splash/jquery-ui-1.7.2.custom")#
+   	 #javascriptIncludeTag("cms/application")#
 	</cfoutput>
 </head>
 <body>
